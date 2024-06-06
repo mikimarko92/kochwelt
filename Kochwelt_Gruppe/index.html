@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochwelt</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <!-- googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon//favicon-16x16.png">
+    <link rel="manifest" href="./img/favicon/site.webmanifest">
+
+    <script src="/script.js"></script>
+</head>
+
+<body onload="includeHTML()">
+<div class="wrapper">
+
+    <header class="content-padding border-with-shadow-bottom">
+        <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
+        <nav>
+            <div class="green-bottom-border" id="nav1"><a id="navLink1" onclick="selectNavItem('nav1', 'navLink1')"
+                    class="font-semi-bold color-green" href="./index.html">Start</a></div>
+            <div id="nav2"><a id="navLink2" onclick="selectNavItem('nav2', 'navLink2'); setToLoadedRecipe(2)" class="font-semi-bold"
+                    href="./recipe.html">Rezept des Tages</a></div>
+            <div id="nav3"><a id="navLink3" onclick="selectNavItem('nav3', 'navLink3')" class="font-semi-bold"
+                    href="./contact.html">Kontakt</a></div>
+            <div id="nav4"><a id="navLink4" onclick="selectNavItem('nav4', 'navLink4')" class="font-semi-bold"
+                    href="./imprint.html">Impressum</a></div>
+        </nav>
+        <img onclick="slideInMobileNav()" class="nav-bar-img min-600-display-none margin-bottom margin-right"
+            src="/img/bars-solid.svg" alt="">
+    </header>
+    <div class="mobile-nav display-none">
+        <nav>
+            <div id="nav1"><a id="navLink1" onclick="selectNavItem('nav1', 'navLink1')"
+                    class="font-semi-bold color-green" href="./index.html">Start</a></div>
+            <div id="nav2"><a id="navLink2" onclick="selectNavItem('nav2', 'navLink2'); setToLoadedRecipe(2)" class="font-semi-bold"
+                    href="./recipe.html" >Rezept des Tages</a></div>
+            <div id="nav3"><a id="navLink3" onclick="selectNavItem('nav3', 'navLink3')" class="font-semi-bold"
+                    href="./contact.html">Kontakt</a></div>
+            <div id="nav4"><a id="navLink4" onclick="selectNavItem('nav4', 'navLink4')" class="font-semi-bold"
+                    href="./imprint.html">Impressum</a></div>
+        </nav>
+    </div>
+
+    <div class="content padding-top-bottom">
+        <div class="width100" w3-include-html="./templates/main-section.html"></div>
+        <div class="width100" w3-include-html="./templates/rezepte-section.html"></div>
+        <div class="width100" w3-include-html="./templates/editorial-section.html"></div>
+    </div>
+
+    <footer>
+        <div class="footer-content content-padding">
+
+            <div>
+                <img src="./img/logo_white.png" height="60px">
+            </div>
+
+            <div class="footer-links">
+                <a href="./contact.html">Kontakt</a>
+                <a href="./imprint.html">Impressum</a>
+            </div>
+
+            <div class="social">
+                <a href="https://www.facebook.com" target="_blank"><img style="width: 32px;"
+                        src="./img/facebook.png"></a>
+                <a href="https://www.instagram.com" target="_blank"><img style="width: 32px;"
+                        src="./img/instagram.png"></a>
+                <a href="https://twitter.com" target="_blank"><img style="width: 32px;" src="./img/twitter.png"></a>
+            </div>
+
+        </div>
+    </footer>
+
+</div>
+
+</body>
+
+</html>
